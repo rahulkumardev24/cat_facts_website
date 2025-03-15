@@ -98,3 +98,72 @@ button:hover {
         transform: translateY(0);
     }
 }
+
+
+/* -------------------------------------------------------- Responsive Design  ------------------------------- */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    body {
+        background-image: url("cat-mobile.jpg");         
+    }
+
+    nav h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .cat-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+        margin-top: 8%;
+    }
+    body {
+        background-image: url("cat-mobile.jpg"); 
+     
+        
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
