@@ -3,7 +3,6 @@ const factText = document.getElementById("fact");
 const factBtn = document.getElementById("factBtn");
 
 /*
-
 // Hit APi With Fetch 
 // Function to fetch a new cat fact
 const fetchCatFact = () => {
@@ -28,6 +27,7 @@ fetchCatFact();
 
 // Hit Api with await async 
 // Function to fetch a new cat fact using async/await
+/*
 const fetchCatFact = async () => {
     try {
         factText.textContent = "Fetching new fact... 🐾";
@@ -46,3 +46,23 @@ factBtn.addEventListener("click", fetchCatFact);
 
 // Fetch an initial fact when the page loads
 fetchCatFact();
+*/
+
+// Hit API With Axios 
+
+async function getCatFacts() {
+    try {
+        factText.textContent = "Fetching new fact... 🐾";
+        let response = await axios.get(url);
+        return response.data.fact;
+    } catch (error) {
+        console.error("Error fetching cat fact:", error);
+        return "Oops! Couldn't fetch a fact. Try again.";
+    }
+}
+
+// Event listener for button
+factBtn.addEventListener("click", async () => {
+    factText.textContent = await getCatFacts();
+});
+
